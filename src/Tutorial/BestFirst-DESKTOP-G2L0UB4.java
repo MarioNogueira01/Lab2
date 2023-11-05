@@ -14,6 +14,8 @@ public class BestFirst {
 
     public int expansion = 0;
 
+    public int prof = 0;
+
     public static class State {
         private Ilayout layout;
         private State father;
@@ -96,6 +98,7 @@ public class BestFirst {
                 result.add(this.actual);
                 while (this.actual != null) {
                     result.add(0, this.actual.father);
+                    prof++;
                     this.actual = this.actual.father;
                 }
                 result.remove(result.remove(0));

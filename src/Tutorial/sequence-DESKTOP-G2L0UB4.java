@@ -25,9 +25,9 @@ public class sequence implements Ilayout{
 
         resultChildren.add(new sequence(num+1,1));
 
-        resultChildren.add(new sequence(num - 1,2));
+        resultChildren.add(new sequence(num - 1,1));
 
-        resultChildren.add(new sequence(num*2,3));
+        resultChildren.add(new sequence(num*2,1));
 
         return resultChildren;
     }
